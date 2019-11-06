@@ -1,0 +1,61 @@
+
+setlist = [{
+	"title": "Autoclave",
+	"artist": ["The Mountain Goats"],
+	"genre": ["Indie", "Folk"],
+	"year_released": 2008
+},
+{
+	"title": "Flatliners",
+	"artist": ["Twin Shadow"],
+	"genre": ["Alternative"],
+	"year_released": 2016
+},
+{
+	"title": "Australia",
+	"artist": ["The Shins"],
+	"genre": ["Indie", "Rock"],
+	"year_released": 2007
+},
+{
+	"title": "Float On",
+	"artist": ["Modest Mouse"],
+	"genre": ["Indie", "Rock"],
+	"year_released": 2004
+},
+{
+	"title": "Hey Ma",
+	"artist": ["Bon Iver"],
+	"genre": ["Indie", "Folk"],
+	"year_released": 2019
+},
+{
+	"title": "Come On Eileen",
+	"artist": ["Save Ferris"],
+	"genre": ["Ska", "Punk"],
+	"year_released": 1997
+},
+{
+	"title": "Somewhere in the Between",
+	"artist": ["Streetlight Manifesto"],
+	"genre": ["Punk", "Ska"],
+	"year_released": 2007
+},
+{
+	"title": "No Drug Like Me",
+	"artist": ["Carle Rae Jepsen"],
+	"genre": ["Pop"],
+	"year_released": 2019
+},
+{
+	"title": "Truth Hurts",
+	"artist": ["Lizzo"],
+	"genre": ["Trap", "Pop"],
+	"year_released": 2017
+},
+{
+	"title": "Wonderwall",
+	"artist": ["Oasis"],
+	"genre": ["Indie", "Rock"],
+	"year_released": 1995
+}]

@@ -1,0 +1,63 @@
+html{
+font-family:Arial,Helvetica,sans-serif;
+}
+body{
+	margin:0;
+}
+.serial{
+	word-break: break-word;
+	display: inline-block;
+}
+form{
+	padding:5px 5px;
+	border: 2px solid #FF6B6B;
+	margin-left: 200px;
+	display: inline
+}
+input[type="button"]{
+	display: inline-block;
+	background-color:#F7FFF7;
+	color:#1A535C;
+	text-decoration: none;
+	border:none;
+	padding: 10px 15px;
+	
+}
+input[type="button"]:hover{
+	background-color:#E1E8E1;
+	cursor: pointer;
+	}
+.header{
+display:block;
+padding-top:20px;
+background-color:#1A535C;
+color:#F7FFF7;
+font-size:4em;
+}
+label{
+	font-size: 0.5em;
+}
+.song{
+display:block;
+background-color:#F7FFF7;
+}
+.title{
+display:block;
+background-color:#1A535C;
+color:#F7FFF7;
+font-size:3em;
+}
+.artist, .year, .genre{
+display:block;
+margin:5px 0px;
+text-indent: 10px;
+}
+.year{
+background-color:#FF6B6B;
+}
+.artist{
+background-color:#FFE66D;
+}
+.genre{
+background-color:#4ECDC4
+}

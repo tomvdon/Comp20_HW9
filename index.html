@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Setlist</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="setlist.json"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+
+		function build_set(list){
+			//Creates div of Song with data
+			for (i in list) {
+				song = list[i];
+				sl_html = "<div class='song' id=" + i +">"
+				sl_html += "<span class='title'>" + song["title"] + "</span>";
+				sl_html += "<span class='artist'>Artist: " + song["artist"] + "</span>"
+				sl_html += "<span class='genre'>Genre: " + song["genre"] + "</span>"
+				sl_html += "<span class='year'>Released: " + song["year_released"] + "</span>"
+				sl_html += "</div>"
+				document.write(sl_html);
+			}
+		}
+
+
+		function build_form(list){
+			var genres = []
+			for (i in list) {
+				song = list[i];
+				//Loops through genres of a song
+				for (j in song["genre"]){
+					g = song["genre"][j];
+					//Checks if genre is already in selection options, could also use selection array
+					if (genres.includes(g))
+						continue
+					else
+					{
+						genres.push(g)
+						$("#filter").append(new Option(g,g))
+					}
+				}
+			}
+		}
+
+
+		function filter_genre(list, filter){
+			if (filter == "All"){
+				$("#user").children("div").show()
+				return
+			}
+			for (i in list) {
+				song = list[i];
+				for (j in song["genre"]){
+					g = song["genre"][j];
+					if (filter == g){
+						$("#"+i).show()
+						break
+					}
+					else{
+						$("#"+i).hide()
+					}
+				}
+			}
+		}
+
+
+		$(document).ready(function(){
+			build_form(setlist)
+			$("#btn_filter").click(function(){
+				filter_genre(setlist, $("#filter").val() )
+				console.log($("select#filter").val() )
+			})
+		});
+
+	</script>
+</head>
+<body>
+	<div id="serial">
+		<p>
+		<script type="text/javascript">
+			//For Part 1
+		setlist_string = JSON.stringify(setlist);
+		document.write(setlist_string);
+		</script>
+		</p>
+	</div>
+	<div class="header">
+		<span>Setlist</span>
+		<form>
+			<label for="filter">Filter Genre: </label>
+			<select id="filter">
+				<option value="All">All</option>
+			</select>
+			<input type="button" name="btn_filter" id="btn_filter" value="Filter">
+		</form>
+	</div>
+	<div id ="user">
+		<script type="text/javascript">
+		build_set(setlist);
+		</script>
+	</div>
+</body>
+</html>
